@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cors({
     origin: [
         "http://localhost:5173",
-        process.env.BASE_URL
+        "https://nature-nook.vercel.app"
     ],
 
     credentials: true
