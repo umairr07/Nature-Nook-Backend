@@ -13,7 +13,11 @@ console.log("Stripe Secret Key in index file:", process.env.STRIPE_SECRET_KEY);
 app.use(express.json());
 
 app.use(cors({
-    origin: "http://localhost:5173", // Allow your frontend
+    origin: [
+        "http://localhost:5173",
+        "https://nature-nook-backend.onrender.com"
+    ],
+
     credentials: true
 }));
 
