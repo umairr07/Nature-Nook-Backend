@@ -4,7 +4,6 @@ dotenv.config();
 import Stripe from "stripe";
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
-// const DOMAIN = process.env.BASE_URL || "http://localhost:5173";
 
 
 export const order = async (req, res) => {
@@ -26,8 +25,8 @@ export const order = async (req, res) => {
             payment_method_types: ["card"],
             line_items,
             mode: "payment",
-            success_url: "https://nature-nook.vercel.app/success",
-            cancel_url: "https://nature-nook.vercel.app/cancel ",
+            success_url: "http://localhost:5173/success",
+            cancel_url: "http://localhost:5173/cancel",
         });
 
         res.json({ id: session.id });

@@ -7,7 +7,7 @@ import cors from "cors";
 dotenv.config();
 const app = express();
 
-console.log("Stripe Secret Key in index file:", process.env.STRIPE_SECRET_KEY);
+// console.log("Stripe Secret Key in index file:", process.env.STRIPE_SECRET_KEY);
 
 
 app.use(express.json());
